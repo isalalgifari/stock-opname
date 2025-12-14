@@ -1,20 +1,27 @@
 
-1. setup local database 
+1. setup local database
+   
 versi postgresql = PostgreSQL 17.6 
-CREATE DATABASE stockopname
-untuk database bisa juga restore file dump-stockopname
 
-2. setup local backend 
+CREATE DATABASE stockopname
+
+untuk database bisa juga restore file dump-stockopname-202512141432
+
+3. setup local backend
+   
 versi node = v18.16.1
+
 npm install
+
 file .env isinya:
 DATABASE_URL=postgres://postgres:password@localhost:5432/stockopname
 PORT=3000
+
 migration:
 npx drizzle-kit generate:pg
 npx drizzle-kit push:pg
 
-3. setup local frontend 
+5. setup local frontend 
 versi node = v18.16.1
 npm install
 
